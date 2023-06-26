@@ -102,10 +102,11 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 /* New toots glow
    -------------- */
 .column-header__wrapper.active:before {
-    background: radial-gradient(ellipse,rgb(255 157 99 / 23%) 0,rgba(99,100,255,0) 60%);
-}
+    background: radial-gradient(ellipse, var(--color-accent), rgba(99, 100, 255, 0) 60%);
+    opacity: 40%;
+    }
 .column-header__wrapper.active {
-    box-shadow: 0 1px 0 rgb(255 188 140 / 30%);
+    box-shadow: 0 1px 0 #393f4f;
 }
 
 
