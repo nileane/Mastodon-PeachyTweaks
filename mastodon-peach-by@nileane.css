@@ -114,10 +114,11 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 /* Trending hashtags
    ----------------- */
 .trends__item__sparkline path:last-child {
-    stroke: #F0926A !important;
+    stroke: var(--color-accent) !important;
 }
 .trends__item__sparkline path:first-child {
-    fill: rgb(255 196 140 / 19%) !important;
+    fill: var(--color-accent) !important;
+    opacity: 20%;
 }
 
 
