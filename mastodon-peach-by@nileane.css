@@ -1,0 +1,226 @@
+/* Mastodon Peach by @nileane@nileane.fr
+   Collection of CSS tweaks initally made for my personal instance nileane.fr
+   
+   Tweaks currently include:
+   - Hiding several redundant UI elements (footer, trending hashtags header, ...)
+   - Trimming down the UI for logged-out visitors (no 'Explore' tab in sidebar on desktop + no sidebar at all on mobile devices)
+   - CSS supporting my custom About page (https://nileane.fr/about)
+   - Color tweaks to switch the main UI accent color from purple to orange
+   - Tweaks to profile fields (no 'Joined' field, cleaner verified fields)
+
+*/
+
+
+
+.about__header, /* Hide header section on about page */
+.about__meta, /* Hide meta section on about page */
+div#mastodon > div > div > div:nth-child(2) > div:nth-child(3) > div > div > div:nth-child(3) > hr,
+.navigation-panel__legal > hr,
+.navigation-panel > .column-link:only-of-type, /* Hide Explore tab for logged-out users */
+.navigation-panel__sign-in-banner + .navigation-panel__legal + .flex-spacer + .getting-started__trends, /* Hide Trending section for logged-out users */
+.about__footer, /* Hide meta footer */
+.server-banner__introduction, /* Hide generic mastodon server introduction in sidebar */
+.search-banner ~ .search, /* Hide search field for logged out users */
+.ui__header__links .button.button-tertiary,
+a.column-link[href="/public"], /* Hide Federated timeline button in nav */
+.getting-started__trends h4, /* Hide Trending header in sidebar */
+.account__header__bio .account__header__fields > dl:first-child, /* Hide "Joined" field on profiles */
+.sign-in-banner button.button {
+    display: none;
+}
+
+
+
+/* Hide vertical navbar for logged out users
+   ----------------------------------------- */
+@media screen and (max-width:889px) {
+    .columns-area__panels__main:not(:has(+ .columns-area__panels__pane .columns-area__panels__pane__inner .navigation-panel .column-link[title=Notifications])) {
+        width: 100%;
+        margin-right: -55px;
+    }
+    .columns-area__panels__pane__inner:not(:has(.navigation-panel .column-link[href="/notifications"])) {
+        display: none;
+    }
+}
+  
+
+
+/* Profile tweaks
+   -------------- */
+.account__header__bio .account__header__fields dl:nth-child(2) { /* Add a corner radius to the second profile field because we're hiding the Joined field */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-top: 0;
+}
+.account__header__bio .account__header__fields .verified + .verified { /* Fix double border between 2 successive verified fields */
+    margin-top: 0;
+    border-top-width: 0;
+}
+.account__header__bio .account__header__fields .verified a, .account__header__bio .account__header__fields .verified dd { /* Verified field tweak: vivid green text */
+    color: #79bd9a;
+}
+.account__header__bio .account__header__fields .verified dt { /* Verified field tweak: restore default field title color */
+    color: #606984;
+}
+.account__header__bio .account__header__fields .verified { /* Verified field tweak: restore default background and border */
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid #313543;
+    background: none;
+}
+.account__header__extra .account__header__fields .verified dd span:first-child { /* Verified field tweak: adding a green background circle to the checkmark icon */
+    display: inline-block;
+    background-color: #79bd9a;
+    border-radius: 50px;
+    width: 1.3em;
+    height: 1.3em;
+    text-align: center;
+    margin-right: 2px;
+}
+.account__header__extra .account__header__fields .verified dd span:first-child i { /* white checkmark */
+    color: black;
+    font-size: 85%;
+}
+
+
+
+/* New toots glow
+   -------------- */
+.column-header__wrapper.active:before {
+    background: radial-gradient(ellipse,rgb(255 157 99 / 23%) 0,rgba(99,100,255,0) 60%);
+}
+.column-header__wrapper.active {
+    box-shadow: 0 1px 0 rgb(255 188 140 / 30%);
+}
+
+
+
+/* Trending hashtags
+   ----------------- */
+.trends__item__sparkline path:last-child {
+    stroke: #F0926A !important;
+}
+.trends__item__sparkline path:first-child {
+    fill: rgb(255 196 140 / 19%) !important;
+}
+
+
+
+/* Buttons and links
+   ----------------- */
+.button,
+.button.logo-button,
+.icon-with-badge__badge,
+.rules-list li:before {
+    background-color: #F0926A;
+}
+.button.button-tertiary,
+.account__header__fields a,
+.account__header__bio .account__header__fields a,
+.reply-indicator__content a.unhandled-link,
+.status__content a.unhandled-link,
+.column-back-button,
+.about__section__title,
+.prose a,
+.column-link--transparent.active,
+.column-header.active .column-header__icon,
+.column-header > .column-header__back-button,
+.column-header__back-button,
+.interaction-modal__icon,
+.status__content a.mention,
+.icon-button.active {
+    color: #F0926A;
+    border-color: #F0926A;
+}
+.copypaste input {
+    border-color: #F0926A;
+}
+.button:not(.button-secondary):active,
+.button:not(.button-secondary):focus,
+.button:not(.button-secondary):hover,
+.button.button-tertiary:active,
+.button.button-tertiary:focus,
+.button.button-tertiary:hover,
+.button.logo-button:active,
+.button.logo-button:focus,
+.button.logo-button:hover {
+    background-color: #c5673f;
+}
+.status__content a.hashtag { /* using a faded color variant for hashtags links */
+    color: #ecb39b;
+}
+.sign-in-banner .button {
+    padding: 7px 18px;
+}
+.sign-in-banner .button,
+.ui__header__links .button,
+.button.button-secondary {
+    color: #9baec8;
+    background: transparent;
+    border: 0 none;
+    box-shadow: inset 0 0 0 1px rgba(155, 174, 200, .4);
+}
+.sign-in-banner .button:hover,
+.ui__header__links .button:hover,
+.button.button-secondary:hover {
+    color: #222;
+    background: #9baec8;
+    border: 0 none;
+    box-shadow: inset 0 0 0 1px #9baec8;
+}
+
+
+
+/* Notification badge
+   ------------------ */
+.notification.unread::before, .status__wrapper.unread::before {
+    border-left: 4px solid #F0926A;
+}
+
+
+
+/* Custom About/Home page for nileane.fr
+   ------------------------------------- */
+#mastodon > div > div > div.columns-area__panels > div.columns-area__panels__main > div.columns-area.columns-area--mobile > div > div > div.about__section.active:nth-of-type(3) > div.about__section__title {
+    display: none;
+}
+.about__section__title {
+    color: #dfdfdf !important;
+} 
+.about__section__body {
+    border: 0 !important;
+    padding-bottom: 3em;
+}
+#mastodon > div > div > div.columns-area__panels > div.columns-area__panels__main > div.columns-area.columns-area--mobile > div > div > div.about__section.active:not(:nth-of-type(3)) > div.about__section__body {
+    border: 0 !important;
+    background-color: #313543;
+    border-radius: 0 0 4px 4px;
+}
+.about__section__body .prose img {
+    width: 40px;
+    border-radius: 5px;
+    float: left;
+    margin: 2px 12px 0 7px;
+}
+.about__section__body .prose hr {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-width: 3px;
+}
+.about__section__body .prose a {
+    color: #9baec8;
+    text-decoration: none;
+}
+.about__section__body .prose a:hover {
+    color: #9baec8;
+    text-decoration: none;
+}
+.about__section__body .prose small {
+    margin-left: -2em;
+    display: block;
+    color: #606984;
+    font-weight: bold;
+    font-size: 80%;
+    float: left;
+}
