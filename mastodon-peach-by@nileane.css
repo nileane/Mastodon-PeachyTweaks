@@ -31,6 +31,18 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 
 
 
+/* Colors
+   ------ */
+:root {
+    --color-accent: #F0926A;
+    --color-accent-faded: #ecb39b;
+    --color-accent-focus: #c5673f;
+    --color-neutral: #9baec8;
+    --color-verified: #79bd9a;
+} 
+
+
+
 /* Hide vertical navbar for logged out users
    ----------------------------------------- */
 @media screen and (max-width:889px) {
@@ -57,7 +69,7 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
     border-top-width: 0;
 }
 .account__header__bio .account__header__fields .verified a, .account__header__bio .account__header__fields .verified dd { /* Verified field tweak: vivid green text */
-    color: #79bd9a;
+    color: var(--color-verified);
 }
 .account__header__bio .account__header__fields .verified dt { /* Verified field tweak: restore default field title color */
     color: #606984;
@@ -71,7 +83,7 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 }
 .account__header__extra .account__header__fields .verified dd span:first-child { /* Verified field tweak: adding a green background circle to the checkmark icon */
     display: inline-block;
-    background-color: #79bd9a;
+    background-color: var(--color-verified);
     border-radius: 50px;
     width: 1.2em;
     height: 1.2em;
@@ -115,7 +127,7 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 .button.logo-button,
 .icon-with-badge__badge,
 .rules-list li:before {
-    background-color: #F0926A;
+    background-color: var(--color-accent);
 }
 .button.button-tertiary,
 .account__header__fields a,
@@ -132,11 +144,11 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 .interaction-modal__icon,
 .status__content a.mention,
 .icon-button.active {
-    color: #F0926A;
-    border-color: #F0926A;
+    color: var(--color-accent);
+    border-color: var(--color-accent);
 }
 .copypaste input {
-    border-color: #F0926A;
+    border-color: var(--color-accent);
 }
 .button:not(.button-secondary):active,
 .button:not(.button-secondary):focus,
@@ -147,10 +159,10 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 .button.logo-button:active,
 .button.logo-button:focus,
 .button.logo-button:hover {
-    background-color: #c5673f;
+    background-color: var(--color-accent-focus);
 }
 .status__content a.hashtag { /* using a faded color variant for hashtags links */
-    color: #ecb39b;
+    color: var(--color-accent-faded);
 }
 .sign-in-banner .button {
     padding: 7px 18px;
@@ -158,7 +170,7 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 .sign-in-banner .button,
 .ui__header__links .button,
 .button.button-secondary {
-    color: #9baec8;
+    color: var(--color-neutral);
     background: transparent;
     border: 0 none;
     box-shadow: inset 0 0 0 1px rgba(155, 174, 200, .4);
@@ -167,17 +179,17 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 .ui__header__links .button:hover,
 .button.button-secondary:hover {
     color: #222;
-    background: #9baec8;
+    background: var(--color-neutral);
     border: 0 none;
-    box-shadow: inset 0 0 0 1px #9baec8;
+    box-shadow: inset 0 0 0 1px var(--color-neutral);
 }
 
 
 
-/* Notification badge
-   ------------------ */
+/* Notifications
+   ------------- */
 .notification.unread::before, .status__wrapper.unread::before {
-    border-left: 4px solid #F0926A;
+    border-left: 4px solid var(--color-accent);
 }
 
 
@@ -211,11 +223,11 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
     border-width: 3px;
 }
 .about__section__body .prose a {
-    color: #9baec8;
+    color: var(--color-neutral);
     text-decoration: none;
 }
 .about__section__body .prose a:hover {
-    color: #9baec8;
+    color: var(--color-neutral);
     text-decoration: none;
 }
 .about__section__body .prose small {
