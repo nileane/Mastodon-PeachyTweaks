@@ -73,13 +73,14 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
     display: inline-block;
     background-color: #79bd9a;
     border-radius: 50px;
-    width: 1.3em;
-    height: 1.3em;
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 1.2;
     text-align: center;
     margin-right: 2px;
 }
 .account__header__extra .account__header__fields .verified dd span:first-child i { /* white checkmark */
-    color: black;
+    color: #1f232b;
     font-size: 85%;
 }
 
