@@ -97,7 +97,7 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 }
 .column-header,
 .column-back-button {
-    background-color: rgba(49, 53, 68, 0.8);
+    background-color: rgba(49, 53, 68, 0.75);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 }
