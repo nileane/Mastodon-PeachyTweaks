@@ -207,7 +207,8 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 .button.button-tertiary:hover,
 .button.logo-button:active,
 .button.logo-button:focus,
-.button.logo-button:hover {
+.button.logo-button:hover,
+.status__content__read-more-button {
     background-color: var(--color-accent-focus);
 }
 .dropdown-menu__item a:active,

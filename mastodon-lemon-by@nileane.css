@@ -189,7 +189,8 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 .column-header__back-button,
 .interaction-modal__icon,
 .status__content a.mention,
-.icon-button.active {
+.icon-button.active,
+.status__content__read-more-button {
     color: var(--color-accent);
     border-color: var(--color-accent);
 }
