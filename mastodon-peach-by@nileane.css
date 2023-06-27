@@ -14,7 +14,7 @@
 
 /* Colors
    ------ */
-   :root {
+:root {
     --color-accent: #F0926A;
     --color-accent-faded: #ecb39b;
     --color-accent-focus: rgba(240, 146, 105, 0.7);
