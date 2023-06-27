@@ -1,15 +1,7 @@
-/* Mastodon PEACH by @nileane@nileane.fr
+/* Mastodon CSS Tweaks by @nileane@nileane.fr
    Collection of CSS tweaks initally made for my personal instance nileane.fr
    
    version: 1.1
-   
-   Tweaks currently include:
-   - Hiding several redundant UI elements (footer, trending hashtags header, ...)
-   - Trimming down the UI for logged-out visitors (no 'Explore' tab in sidebar on desktop + no sidebar at all on mobile devices)
-   - CSS supporting my custom About page (https://nileane.fr/about)
-   - Color tweaks to switch the main UI accent color from purple to orange
-   - Tweaks to profile fields (no 'Joined' field, cleaner verified fields)
-
 */
 
 
