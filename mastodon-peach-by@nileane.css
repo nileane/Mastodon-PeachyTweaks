@@ -189,7 +189,8 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 .column-header__back-button,
 .interaction-modal__icon,
 .status__content a.mention,
-.icon-button.active {
+.icon-button.active,
+.status__content__read-more-button {
     color: var(--color-accent);
     border-color: var(--color-accent);
 }
@@ -207,8 +208,7 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 .button.button-tertiary:hover,
 .button.logo-button:active,
 .button.logo-button:focus,
-.button.logo-button:hover,
-.status__content__read-more-button {
+.button.logo-button:hover {
     background-color: var(--color-accent-focus);
 }
 .dropdown-menu__item a:active,
