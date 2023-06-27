@@ -34,9 +34,9 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 /* Colors
    ------ */
 :root {
-    --color-accent: #F0926A;
-    --color-accent-faded: #ecb39b;
-    --color-accent-focus: rgba(240, 146, 105, 0.7);
+    --color-accent: #ffb474;
+    --color-accent-faded: #f0c6a0;
+    --color-accent-focus: rgba(255, 180, 116, 0.75);
     --color-neutral: #9baec8;
     --color-verified: #79bd9a;
 } 
