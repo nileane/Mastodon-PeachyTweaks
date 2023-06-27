@@ -127,9 +127,10 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
    ----------------- */
 .button,
 .button.logo-button,
-.icon-with-badge__badge,
-.rules-list li:before {
+.rules-list li:before,
+.icon-with-badge__badge {
     background-color: var(--color-accent);
+    color: rgba(0, 0, 0, .7);
 }
 .button.button-tertiary,
 .account__header__fields a,
@@ -149,6 +150,9 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
     color: var(--color-accent);
     border-color: var(--color-accent);
 }
+.column-link--transparent.active {
+    font-weight: bold;
+}
 .copypaste input {
     border-color: var(--color-accent);
 }
@@ -162,6 +166,16 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 .button.logo-button:focus,
 .button.logo-button:hover {
     background-color: var(--color-accent-focus);
+}
+.dropdown-menu__item a:active,
+.dropdown-menu__item a:focus,
+.dropdown-menu__item a:hover,
+.dropdown-menu__item button:active,
+.dropdown-menu__item button:focus,
+.dropdown-menu__item button:hover {
+    background: var(--color-accent);
+    color: rgba(0, 0, 0, .7);
+    outline: 0;
 }
 .status__content a.hashtag { /* using a faded color variant for hashtags links */
     color: var(--color-accent-faded);
