@@ -1,4 +1,4 @@
-/* Mastodon Peach by @nileane@nileane.fr
+/* Mastodon PEACH by @nileane@nileane.fr
    Collection of CSS tweaks initally made for my personal instance nileane.fr
    
    Tweaks currently include:
@@ -9,6 +9,18 @@
    - Tweaks to profile fields (no 'Joined' field, cleaner verified fields)
 
 */
+
+
+
+/* Colors
+   ------ */
+   :root {
+    --color-accent: #F0926A;
+    --color-accent-faded: #ecb39b;
+    --color-accent-focus: rgba(240, 146, 105, 0.7);
+    --color-neutral: #9baec8;
+    --color-verified: #79bd9a;
+} 
 
 
 
@@ -31,16 +43,28 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 
 
 
-/* Colors
-   ------ */
-:root {
-    --color-accent: #F0926A;
-    --color-accent-faded: #ecb39b;
-    --color-accent-focus: rgba(240, 146, 105, 0.7);
-    --color-neutral: #9baec8;
-    --color-verified: #79bd9a;
-} 
+#logo-symbol-wordmark > path:nth-child(1) { /* grayscale Mastodon logo */
+    fill: var(--color-neutral);
+    opacity: .4;
+}
+.loading-bar { /* Loeading Bar */
+    background-color: var(--color-accent);
+}
 
+
+.react-toggle--checked .react-toggle-track { /* thumb switches */
+    background-color: var(--color-neutral);
+}
+.react-toggle--checked .react-toggle-thumb {
+    border-color: var(--color-neutral);
+}
+
+.poll__chart { /* poll charts */
+    background: var(--color-accent-faded);
+}
+.poll__chart.leading {
+    background: var(--color-accent);
+}
 
 
 /* Hide vertical navbar for logged out users
@@ -54,7 +78,33 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
         display: none;
     }
 }
-  
+
+
+
+/* Column header tweaks : backdrop blur
+   ------------------------------------ */
+.tabs-bar__wrapper {
+    background-color: transparent;
+    border-radius: 4px 4px 0 0;
+}
+@media screen and (min-width:1175px) {
+    .tabs-bar__wrapper {
+        box-shadow: inset 0 10px #191B21,
+            0 -10px #191B21;
+    }
+}
+.column-header,
+.column-back-button {
+    background-color: rgba(49, 53, 68, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+.column-header__button {
+    background-color: transparent;
+}
+.column-header.active .column-header__icon {
+    color: #FFF;
+}
 
 
 /* Profile tweaks
@@ -141,7 +191,6 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 .about__section__title,
 .prose a,
 .column-link--transparent.active,
-.column-header.active .column-header__icon,
 .column-header > .column-header__back-button,
 .column-header__back-button,
 .interaction-modal__icon,
