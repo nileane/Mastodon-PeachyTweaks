@@ -173,7 +173,7 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 
 /* Buttons and links
    ----------------- */
-body:not(.admin) .button,
+.app-body .button,
 .button.logo-button,
 .rules-list li:before,
 .icon-with-badge__badge {
@@ -204,9 +204,9 @@ body:not(.admin) .button,
 .copypaste input {
     border-color: var(--color-accent);
 }
-body:not(.admin) .button:not(.button-secondary):active,
-body:not(.admin) .button:not(.button-secondary):focus,
-body:not(.admin) .button:not(.button-secondary):hover,
+.app-body .button:not(.button-secondary):active,
+.app-body .button:not(.button-secondary):focus,
+.app-body .button:not(.button-secondary):hover,
 .button.button-tertiary:active,
 .button.button-tertiary:focus,
 .button.button-tertiary:hover,
@@ -231,17 +231,17 @@ body:not(.admin) .button:not(.button-secondary):hover,
 .sign-in-banner .button {
     padding: 7px 18px;
 }
-.sign-in-banner .button,
-.ui__header__links .button,
-.button.button-secondary {
+.app-body .sign-in-banner .button,
+.app-body .ui__header__links .button,
+.app-body .button.button-secondary {
     color: var(--color-neutral);
     background: transparent;
     border: 0 none;
     box-shadow: inset 0 0 0 1px rgba(155, 174, 200, .4);
 }
-.sign-in-banner .button:hover,
-.ui__header__links .button:hover,
-.button.button-secondary:hover {
+.app-body .sign-in-banner .button:hover,
+.app-body .ui__header__links .button:hover,
+.app-body .button.button-secondary:hover {
     color: #222;
     background: var(--color-neutral);
     border: 0 none;
