@@ -59,7 +59,7 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
     fill: var(--color-neutral);
     opacity: .4;
 }
-.loading-bar { /* Loeading Bar */
+.loading-bar { /* Loading Bar */
     background-color: var(--color-accent);
 }
 
