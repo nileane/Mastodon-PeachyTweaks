@@ -1,7 +1,7 @@
 /* Mastodon CSS Tweaks by @nileane@nileane.fr
    Collection of CSS tweaks initally made for my personal instance nileane.fr
    
-   version: 1.2
+   version: 1.3
 
    Learn more: https://nileane.fr/@nileane/110615776486729850
 */
@@ -195,10 +195,14 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 .column-header__back-button,
 .interaction-modal__icon,
 .status__content a.mention,
-.icon-button.active,
 .status__content__read-more-button {
     color: var(--color-accent);
     border-color: var(--color-accent);
+}
+.status__action-bar__dropdown .icon-button.active,
+.account__relationship .icon-button.active,
+.account__header__tabs__buttons .icon-button.active {
+    color: var(--color-accent);
 }
 .column-link--transparent.active {
     font-weight: bold;
