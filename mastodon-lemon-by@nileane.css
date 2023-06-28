@@ -1,7 +1,7 @@
 /* Mastodon CSS Tweaks by @nileane@nileane.fr
    Collection of CSS tweaks initally made for my personal instance nileane.fr
 
-   version: 1.1
+   version: 1.2
    
    Learn more: https://nileane.fr/@nileane/110615776486729850
 */
@@ -14,6 +14,7 @@
     --color-accent: #ffb474;
     --color-accent-faded: #f0c6a0;
     --color-accent-focus: rgba(255, 180, 116, 0.75);
+    --color-accent-fg: rgba(0, 0, 0, .7); /* Text color on buttons. - Use a dark value for light accent colors, use a light value for dark accent colors. */
     --color-neutral: #9baec8;
     --color-verified: #79bd9a;
 }
@@ -66,7 +67,7 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 /* Hide vertical navbar for logged out users
    ----------------------------------------- */
 @media screen and (max-width:889px) {
-    .columns-area__panels__main:not(:has(+ .columns-area__panels__pane .columns-area__panels__pane__inner .navigation-panel .column-link[title=Notifications])) {
+    .columns-area__panels__main:not(:has(+ .columns-area__panels__pane .columns-area__panels__pane__inner .navigation-panel .column-link[href="/notifications"])) {
         width: 100%;
         margin-right: -55px;
     }
@@ -85,7 +86,8 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 }
 @media screen and (min-width:1175px) {
     .tabs-bar__wrapper {
-        box-shadow: inset 0 10px #191B21,
+        box-shadow: 
+            inset 0 10px #191B21,
             0 -10px #191B21;
     }
 }
@@ -171,12 +173,12 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 
 /* Buttons and links
    ----------------- */
-.button,
+.button:not([form="edit_user"]),
 .button.logo-button,
 .rules-list li:before,
 .icon-with-badge__badge {
     background-color: var(--color-accent);
-    color: rgba(0, 0, 0, .7);
+    color: var(--color-accent-fg);
 }
 .button.button-tertiary,
 .account__header__fields a,
@@ -220,7 +222,7 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 .dropdown-menu__item button:focus,
 .dropdown-menu__item button:hover {
     background: var(--color-accent);
-    color: rgba(0, 0, 0, .7);
+    color: var(--color-accent-fg);
     outline: 0;
 }
 .status__content a.hashtag { /* using a faded color variant for hashtags links */
