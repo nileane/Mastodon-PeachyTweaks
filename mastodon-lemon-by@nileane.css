@@ -173,7 +173,7 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 
 /* Buttons and links
    ----------------- */
-.button:not([form="edit_user"]),
+body:not(.admin) .button,
 .button.logo-button,
 .rules-list li:before,
 .icon-with-badge__badge {
@@ -204,9 +204,9 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 .copypaste input {
     border-color: var(--color-accent);
 }
-.button:not(.button-secondary):active,
-.button:not(.button-secondary):focus,
-.button:not(.button-secondary):hover,
+body:not(.admin) .button:not(.button-secondary):active,
+body:not(.admin) .button:not(.button-secondary):focus,
+body:not(.admin) .button:not(.button-secondary):hover,
 .button.button-tertiary:active,
 .button.button-tertiary:focus,
 .button.button-tertiary:hover,
