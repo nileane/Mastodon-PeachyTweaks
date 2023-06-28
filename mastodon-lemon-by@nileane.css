@@ -20,7 +20,8 @@
 }
 
 
-
+/* Hiding a bunch of stuff.
+   ------------------------ */
 .about__header, /* Hide header section on about page */
 .about__meta, /* Hide meta section on about page */
 div#mastodon > div > div > div:nth-child(2) > div:nth-child(3) > div > div > div:nth-child(3) > hr,
@@ -40,11 +41,25 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 
 
 
+/* Hide vertical navbar for logged out users
+   ----------------------------------------- */
+@media screen and (max-width:889px) {
+    .columns-area__panels__main:not(:has(+ .columns-area__panels__pane .columns-area__panels__pane__inner .navigation-panel .column-link[href="/notifications"])) {
+        width: 100%;
+        margin-right: -55px;
+    }
+    .columns-area__panels__pane__inner:not(:has(.navigation-panel .column-link[href="/notifications"])) {
+        display: none;
+    }
+}
+
+
+
 #logo-symbol-wordmark > path:nth-child(1) { /* grayscale Mastodon logo */
     fill: var(--color-neutral);
     opacity: .4;
 }
-.loading-bar { /* Loeading Bar */
+.loading-bar { /* Loading Bar */
     background-color: var(--color-accent);
 }
 
@@ -61,19 +76,6 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 }
 .poll__chart.leading {
     background: var(--color-accent);
-}
-
-
-/* Hide vertical navbar for logged out users
-   ----------------------------------------- */
-@media screen and (max-width:889px) {
-    .columns-area__panels__main:not(:has(+ .columns-area__panels__pane .columns-area__panels__pane__inner .navigation-panel .column-link[href="/notifications"])) {
-        width: 100%;
-        margin-right: -55px;
-    }
-    .columns-area__panels__pane__inner:not(:has(.navigation-panel .column-link[href="/notifications"])) {
-        display: none;
-    }
 }
 
 
