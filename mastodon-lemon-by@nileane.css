@@ -281,7 +281,9 @@ body { /* Use SF Rounded on Apple devices, fallback to usual Mastodon font on ot
     background-color: var(--color-accent-bg);
 }
 .status.status-direct .status__relative-time,
-.detailed-status-direct .fa.fa-at {
+.detailed-status-direct .fa.fa-at,
+.status.status-direct .status__action-bar__button.icon-button:not(.active),
+.status.status-direct .status__action-bar__button.icon-button.disabled {
     color: var(--color-accent);
 }
 
