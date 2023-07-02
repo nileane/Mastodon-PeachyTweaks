@@ -16,7 +16,7 @@ The only differences between the two variants are the values for the accent colo
 
 ---
 
-→ [Announcement post on Mastodon](https://nileane.fr/@nileane/110615776486729850)  
+→ [**Announcement post on Mastodon**](https://nileane.fr/@nileane/110615776486729850)  
 Feel free to send me suggestions for improvement :)
 
 <img width="575" alt="Screenshot of the announcement post on Mastodon" src="https://github.com/nileane/Mastodon-PeachyTweaks/assets/914451/78cda35f-d2c0-4f29-8b52-61857a5d35aa">
