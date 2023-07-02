@@ -1,7 +1,7 @@
 /* Mastodon CSS Tweaks by @nileane@nileane.fr
    Collection of CSS tweaks initally made for my personal instance nileane.fr
 
-   version: 1.4
+   version: 1.5
    
    Learn more: https://nileane.fr/@nileane/110615776486729850
 */
@@ -262,6 +262,21 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
    ------------- */
 .notification.unread::before, .status__wrapper.unread::before {
     border-left: 4px solid var(--color-accent);
+}
+
+
+
+/* Highlight DMs in the timeline
+   ----------------------------- */
+.status.status-direct {
+    box-shadow: inset 3px 0 var(--color-accent);
+}
+.status.status-direct {
+    background-color: var(--color-accent-bg);
+}
+.status.status-direct .status__relative-time,
+.detailed-status-direct .fa.fa-at {
+    color: var(--color-accent);
 }
 
 
