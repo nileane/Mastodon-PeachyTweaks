@@ -56,6 +56,12 @@ a.column-link[href="/public"], /* Hide Federated timeline button in nav */
 
 
 
+body { /* Use SF Rounded on Apple devices, fallback to usual Mastodon font on other devices */
+    font-family: ui-rounded, "mastodon-font-sans-serif", sans-serif;
+}
+
+
+
 #logo-symbol-wordmark > path:nth-child(1) { /* grayscale Mastodon logo */
     fill: var(--color-neutral);
     opacity: .4;
