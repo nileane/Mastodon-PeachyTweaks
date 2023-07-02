@@ -13,6 +13,7 @@
 :root {
     --color-accent: #F0926A;
     --color-accent-faded: #ecb39b;
+    --color-accent-bg: rgb(240, 146, 106, .1);
     --color-accent-focus: rgba(240, 146, 105, 0.7);
     --color-accent-fg: rgba(0, 0, 0, .7); /* Text color on buttons. - Use a dark value for light accent colors, use a light value for dark accent colors. */
     --color-neutral: #9baec8;
