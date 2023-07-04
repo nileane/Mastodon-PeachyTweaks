@@ -1,7 +1,7 @@
 /* Mastodon CSS Tweaks by @nileane@nileane.fr
    Collection of CSS tweaks initally made for my personal instance nileane.fr
    
-   version: 1.5
+   version: 1.5.1
 
    Learn more: https://nileane.fr/@nileane/110615776486729850
 */
@@ -238,6 +238,20 @@ body { /* Use SF Rounded on Apple devices, fallback to usual Mastodon font on ot
     background: var(--color-accent);
     color: var(--color-accent-fg);
     outline: 0;
+}
+.button.button-tertiary.button--confirmation,
+.button.button-tertiary.button--destructive {
+    background-color: transparent;
+}
+.button.button-tertiary.button--confirmation:active, 
+.button.button-tertiary.button--confirmation:focus, 
+.button.button-tertiary.button--confirmation:hover {
+    background-color: #79bd9a;
+}
+.button.button-tertiary.button--destructive:active, 
+.button.button-tertiary.button--destructive:focus, 
+.button.button-tertiary.button--destructive:hover {
+    background-color: #df405a;
 }
 .status__content a.hashtag { /* using a faded color variant for hashtags links */
     color: var(--color-accent-faded);
