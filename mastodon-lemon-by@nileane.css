@@ -1,7 +1,7 @@
 /* Mastodon CSS Tweaks by @nileane@nileane.fr
    Collection of CSS tweaks initally made for my personal instance nileane.fr
 
-   version: 1.6.1
+   version: 1.6.2
    
    Learn more: https://nileane.fr/@nileane/110615776486729850
 */
@@ -316,6 +316,9 @@ body { /* Use SF Rounded on Apple devices, fallback to usual Mastodon font on ot
 .status.status-direct .status__relative-time,
 .detailed-status-direct .fa.fa-at {
     color: var(--color-accent);
+}
+.status-direct.muted .status__content {
+    background: rgba(155, 174, 200, 0.1);
 }
 
 
