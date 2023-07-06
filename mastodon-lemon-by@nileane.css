@@ -1,7 +1,7 @@
 /* Mastodon CSS Tweaks by @nileane@nileane.fr
    Collection of CSS tweaks initally made for my personal instance nileane.fr
 
-   version: 1.5.1
+   version: 1.6
    
    Learn more: https://nileane.fr/@nileane/110615776486729850
 */
@@ -306,16 +306,14 @@ body { /* Use SF Rounded on Apple devices, fallback to usual Mastodon font on ot
 
 /* Highlight DMs in the timeline
    ----------------------------- */
-.status.status-direct {
-    box-shadow: inset 3px 0 var(--color-accent);
-}
-.status.status-direct {
-    background-color: var(--color-accent-bg);
+.status-direct .status__content,
+.detailed-status-direct .status__content {
+    padding: .8em 1em 1em;
+    background: var(--color-accent-bg);
+    border-radius: 0 10px 10px 10px;
 }
 .status.status-direct .status__relative-time,
-.detailed-status-direct .fa.fa-at,
-.status.status-direct .status__action-bar__button.icon-button:not(.active),
-.status.status-direct .status__action-bar__button.icon-button.disabled {
+.detailed-status-direct .fa.fa-at {
     color: var(--color-accent);
 }
 
