@@ -1,7 +1,7 @@
 /* Mastodon CSS Tweaks by @nileane@nileane.fr
    Collection of CSS tweaks initally made for my personal instance nileane.fr
    
-   version: 1.6.3
+   version: 1.6.4
 
    Learn more: https://nileane.fr/@nileane/110615776486729850
 */
@@ -309,9 +309,9 @@ body { /* Use SF Rounded on Apple devices, fallback to usual Mastodon font on ot
    ---------------------------------------- */
 .status-direct .status__content,
 .detailed-status-direct .status__content {
-    padding: .8em 1em 1em;
+    padding: 0.6em 1em .7em;
     background: var(--color-accent-bg);
-    border-radius: 0 10px 10px 10px;
+    border-radius: 0 15px 15px 15px;
     display: inline-block;
 }
 .status.status-direct .status__relative-time,
