@@ -239,6 +239,24 @@ body { /* Use SF Rounded on Apple devices, fallback to usual Mastodon font on ot
     color: var(--color-accent-fg);
     outline: 0;
 }
+
+.privacy-dropdown.active .privacy-dropdown__value.active,
+.privacy-dropdown__option.active,
+.privacy-dropdown__option:hover {
+    background-color: var(--color-accent);
+    color: var(--color-accent-fg);
+}
+.privacy-dropdown__option.active:hover {
+    background-color: var(--color-accent-focus);
+}
+.privacy-dropdown__option.active .privacy-dropdown__option__content, 
+.privacy-dropdown__option.active .privacy-dropdown__option__content strong, 
+.privacy-dropdown__option:hover .privacy-dropdown__option__content, 
+.privacy-dropdown__option:hover .privacy-dropdown__option__content strong,
+.privacy-dropdown.active .privacy-dropdown__value.active .icon-button {
+    color: var(--color-accent-fg);
+}
+
 .button.button-tertiary.button--confirmation,
 .button.button-tertiary.button--destructive {
     background-color: transparent;
