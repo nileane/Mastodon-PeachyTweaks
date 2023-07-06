@@ -1,7 +1,7 @@
 /* Mastodon CSS Tweaks by @nileane@nileane.fr
    Collection of CSS tweaks initally made for my personal instance nileane.fr
 
-   version: 1.6
+   version: 1.6.1
    
    Learn more: https://nileane.fr/@nileane/110615776486729850
 */
@@ -253,7 +253,8 @@ body { /* Use SF Rounded on Apple devices, fallback to usual Mastodon font on ot
 .privacy-dropdown__option.active .privacy-dropdown__option__content strong, 
 .privacy-dropdown__option:hover .privacy-dropdown__option__content, 
 .privacy-dropdown__option:hover .privacy-dropdown__option__content strong,
-.privacy-dropdown.active .privacy-dropdown__value.active .icon-button {
+.privacy-dropdown.active .privacy-dropdown__value.active .icon-button,
+.privacy-dropdown .icon-button.inverted.active {
     color: var(--color-accent-fg);
 }
 
